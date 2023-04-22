@@ -1,0 +1,21 @@
+<!-- <h1>{{ mydata?.Car.id }}</h1>
+<p>{{ mydata?.Car.car }}</p> -->
+
+    <div class="card">
+      <img src="{{'https://via.placeholder.com/150'}}" alt="Car Image">
+      <div class="details">
+        <h3>{{mydata?.Car.car}}</h3>
+        <ul>
+          <li><strong>Color:</strong>{{mydata?.Car.car_color}}</li>
+          <li><strong>Model Year:</strong> {{mydata?.Car.car_model_year}}</li>
+          <li><strong>VIN:</strong> {{mydata?.Car.car_vin}}</li>
+          <li><strong>Price:</strong>{{mydata?.Car.price}}</li>
+          <li>
+            <strong>Availability:</strong>
+            <span *ngIf="mydata?.Car.availability; else elseBlock">Available</span>
+            <ng-template #elseBlock>Not Available</ng-template>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
